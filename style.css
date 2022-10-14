@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --modoClaroSection:#e0e6ea;
+    --modoClaroHeader:#b5d0e2;
+    --textoModoClaro:#000000;
+
+    --hoverLiModoClaro:#362002;
+    
+    --modoOscuroSection:#3b4348;
+    --modoOscuroHeader:#111213;
+    --textoModoOcuro:#f0f8ff;
+    --hoverLiModoOscuro:#deb887;
+    
+    --bottomDowloand:#0f4e0f;
+    --bottomBorderHover:#98fb98;
+}
+
+section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--modoOscuroSection);
+
+}
+
+header{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--modoOscuroHeader);
+    color: #f0f8ff;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+header nav ul li{
+    list-style:none;
+}
+
+header nav ul li button{
+    background-color: transparent;
+    color: var(--textoModoOscuro);
+    padding:5px;
+    margin: 20px;
+    border: none;
+}
+
+header nav ul li button:hover{
+    color:var(--hoverLiModoOscuro);
+    border: 2px double var(--bottomBorderHover);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+div.container{
+    width: 600px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+}
+
+div.container div.container-img{
+    width: 100%;
+    height: 80%;
+    background-color: #000000;
+} 
+
+div.container div.top-text, div.bottom-text{
+    width: 100%;
+    height: 15%;
+    background-color: white;
+    color: #000000;
+}
+
+div.container div.top-text, div.bottom-text h2{
+    padding: 5px;
+
+}
+
+main button.dowloand{
+    background-color: var(--bottomDowloand);
+    color: var(--textoModoOcuro);
+    padding: 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* ***** MOBILE *****/
+
+@media(max-width:460px){
+    section{
+        min-width: 350px;
+    }
+    div.container{
+        width: 200px;
+        height: 200px;
+        font-size: 15px;
+    }
+}
+
+@media(max-width:880px){
+    div.container{
+        width: 300px;
+        height: 250px;
+        font-size: 20px;
+    }
+}
