@@ -6,22 +6,21 @@
 }
 
 :root{
-    --modoClaroSection:#e0e6ea;
-    --modoClaroHeader:#b5d0e2;
+    --modoClaroSection:#c4dff1;
+    --modoClaroHeader:#9ad8d5;
     --textoModoClaro:#000000;
 
-    --hoverLiModoClaro:#362002;
-    
+    --modoOscuroInput: #708499;
     --modoOscuroSection:#3b4348;
     --modoOscuroHeader:#111213;
     --textoModoOcuro:#f0f8ff;
-    --hoverLiModoOscuro:#deb887;
+    --hoverLiModoOscuro:#7b531e;
     
     --bottomDowloand:#0f4e0f;
     --bottomBorderHover:#98fb98;
 }
 
-section{
+section#first{
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -39,6 +38,8 @@ header{
     flex-direction: column;
     background-color: var(--modoOscuroHeader);
     color: #f0f8ff;
+    transition: background 0.5s linear ;
+
 }
 
 header nav ul{
@@ -58,19 +59,28 @@ header nav ul li button{
     padding:5px;
     margin: 20px;
     border: none;
+    font-weight: bold;
 }
 
 header nav ul li button:hover{
     color:var(--hoverLiModoOscuro);
     border: 2px double var(--bottomBorderHover);
 }
-
 main{
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    /* position: relative; */
+    transition: background 0.5s linear;
+
+}
+.meme{
+    /* width: 60%; */
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
+
 div.container{
     width: 600px;
     height: 400px;
@@ -80,6 +90,7 @@ div.container{
     flex-direction: column;
     text-align: center;
     margin-top: 30px;
+    box-shadow:4px #98fb98;
 }
 
 div.container div.container-img{
@@ -100,7 +111,7 @@ div.container div.top-text, div.bottom-text h2{
 
 }
 
-main button.dowloand{
+.meme button.dowloand{
     background-color: var(--bottomDowloand);
     color: var(--textoModoOcuro);
     padding: 15px;
@@ -109,25 +120,126 @@ main button.dowloand{
     border-radius: 3px;
 }
 
+/* *******modal img***** */
+
+aside.form-img{
+    width: 20%;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--modoOscuroSection);
+    color: var(--textoModoOcuro);
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow:scroll;
+
+}
+
+aside.form-img button.x{
+    background-color:transparent;
+    align-self:flex-end;
+}
+
+aside.form-img button.reestablecer-f, select{
+    background-color: var(--modoOscuroInput);
+    margin-left: 3px;
+}
+aside.form-img button.x, button.reestablecer-f{
+    width: fit-content;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    color: var(--textoModoOcuro);
+
+}
+
+.form-img h2{
+    text-align: center;
+    margin: 5pX;
+}
+
+.cont-fondo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.color{
+    display: flex;
+    align-items: center;
+    background-color: var(--modoOscuroInput);
+    margin-bottom:5px ;
+    margin-left: 5px;
+
+}
+
+.color .circulo{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin:5px ;
+    background-color: #deb887;
+
+}
+.form-img label{
+    margin: 5px;
+}
+.form-img h4{
+    padding: 10PX;
+    margin: 5pX;
+
+}
+.cont-range, select, input{
+    width: 100%;
+    color: var(--modoOscuroInput);
+    margin:5px ;
+}
+
+/******clases****/
+.modoClaro{
+    background-color: var(--modoClaroSection);
+    transition: background 0.5s linear ;
+}
+
+.modoClaroHeader{
+    color: var(--textoModoClaro);
+    transition: background 0.5s linear ;
+    background-color: var(--modoClaroHeader  ); 
+
+}
+
+.open{
+    display: flex;
+}
+
+.close{
+    display: none;
+}
 /* RESPONSIVE DESIGN */
 
 /* ***** MOBILE *****/
 
 @media(max-width:460px){
-    section{
+
+    section#first{
         min-width: 350px;
     }
     div.container{
         width: 200px;
-        height: 200px;
+        height: 350px;
         font-size: 15px;
     }
+
+
 }
 
 @media(max-width:880px){
-    div.container{
+    /* ****inicio**** */
+    section#first div.container{
         width: 300px;
-        height: 250px;
+        height: 450px;
         font-size: 20px;
     }
+    /*****imagen*****/
 }

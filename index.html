@@ -42,50 +42,136 @@
         content="./assets/mi-generador-de-memes.png" />
     <link rel="apple-touch-icon"
         href="./assets/mi-generador-de-memes.png" />
-    <meta property="og:description" name="twitter:description" content="Generador de memes " />
+    <meta property="og:description" name="twitter:description" content="App para que puedas crear tu propio meme." />
     <meta name="theme-color" content="#98fb98" />
     <meta name="twitter:card" content="summary" />
     <meta property="og:image:alt" content="Logo de generador de memes" />
-    <meta property="og:description" content="Generador de memes" />
+    <meta property="og:description" content="Proyecto final" />
     <meta property="og:site_name" content="Generador de memes. " />
     <meta property="og:locale" content="AR-S" />
     <meta property="article:author" content="https://www.facebook.com/cintyy73/" />
 </head>
 <body>
-    <section>   
+    <section id="first">   
         <header>
             <h1>Generador de Memes</h1>
             <nav>
-                 <ul>
+                <ul>
                     <li>
-                        <button>🖼 Imagen</button>
+                        <button class="btn-img">🎴 Imagen</button>
                     </li>
                         <li>
                         <button>✍ Texto</button>
                     </li>
                     <li>
-                        <button>💡 Modo oscuro</button>
+                        <button class="modo-claro">😎 Modo claro</button>
                     </li>
                 </ul>    
             </nav>
         </header>
         
         <main>
-            <div class="container">
-                <div class="top-text">
-                    <h2>TOP TEXT</h2>
-                </div>
-                <div class="container-img">
-                </div>
-                <div class="bottom-text">
-                    <h2>BOTTOM TEXT</h2>
-                </div>
-            </div>              
-
-            <button class="dowloand">Descargar meme </button>
+            <div class="meme">
+                <div class="container">
+                    <div class="top-text">
+                        <h2>TOP TEXT</h2>
+                    </div>
+                    <div class="container-img">
+                    </div>
+                    <div class="bottom-text">
+                        <h2>BOTTOM TEXT</h2>
+                    </div>
+                </div>              
+    
+                <button class="dowloand">Descargar meme </button>
+            </div>
+           
         </main>
+        <aside z-index="100" class="form-img">
+            <button class="btn-x">x</button>
+            <form action="">
+                <h2>IMAGEN</h2>
+
+                <label for="url-img">URL</label>
+                <br>
+                <input type="url" id="url-img" value="img">
+                <br>
+
+                <label for="fondo">FONDO</label>
+                <br>
+                <div class="cont-fondo">
+                    <div class="color">
+                        <div class="circulo"></div>
+                        <p class="sexag">#FFFFF</p>
+                    </div>
+                <!--  <div class="cont-color">
+                        <h4>Seleccionar color</h4> 
+                        <div class="color-select"></div>
+
+                    </div> -->
+                    <select type="radio" name="option-color" id="option-color">
+                        <option  value="ninguno">Ninguno</option>
+                        <option value="aclarar">Aclarar</option>
+                        <option value="oscurecer">Oscurecer</option>
+                        <option value="diferencia">Diferencia</option>
+                        <option value="luminosidad">Luminosidad</option>
+                        <option value="multiplicar">Multiplicar</option>
+                    </select>
+                </div>
+                <h4>FILTROS</h4>
+
+                <label for="brillo">BRILLO</label>
+                <div class="cont-range">
+                    <input type="range" id="brillo" min="0" max="100" value="0">
+                </div>
+                
+                <label for="opacidad">OPACIDAD</label>
+                <div class="cont-range">
+                    <input type="range" id="opacidad" min="0" max="100" value="0">
+                </div>
+                
+                <label for="contraste">CONTRASTE</label>
+                <div class="cont-range">
+                    <input type="range" id="contraste" min="0" max="100" value="0">
+                </div>
+                
+                <label for="desenfoque">DESENFOQUE</label>
+                <div class="cont-range">
+                    <input type="range" id="desenfoque" min="0" max="100" value="0">
+                </div>
+
+                <label for="grises">ESCALA DE GRISES</label>
+                <div class="cont-range">
+                    <input type="range" id="grises" min="0" max="100" value="0">
+                </div>
+
+                <label for="sepia">SEPIA</label>
+                <div class="cont-range">
+                    <input type="range" id="sepia" min="0" max="100" value="0">
+                </div>
+
+                <label for="hue">HUE</label>
+                <div class="cont-range">
+                    <input type="range" id="hue" min="0" max="100" value="0">
+                </div>
+
+                <label for="saturado">SATURADO</label>
+                <div class="cont-range">
+                    <input type="range" id="saturado" min="0" max="100" value="0">
+                </div>
+
+                <label for="negativo">NEGATIVO</label>
+                <div class="cont-range">
+                    <input type="range" id="negativo" min="0" max="100" value="0">
+                </div>
+            </form>
+            <button class="reestablecer-f">Reestablecer filtros</button>
+        </aside>
     
     </section>
+
+
+
 
     <script src="./app.js"></script>   
 </body>
