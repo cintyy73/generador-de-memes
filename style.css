@@ -15,7 +15,7 @@
     --modoOscuroHeader:#111213;
     --textoModoOcuro:#f0f8ff;
     --hoverLiModoOscuro:#7b531e;
-    
+    --modoOscuroModal:rgb(34, 33, 33);
     --bottomDowloand:#0f4e0f;
     --bottomBorderHover:#98fb98;
 }
@@ -124,10 +124,10 @@ div.container div.top-text, div.bottom-text h2{
 
 aside.form-img{
     width: 20%;
-    display: none;
+    /* display: none; */
     flex-direction: column;
     padding: 20px;
-    background-color: var(--modoOscuroSection);
+    background-color: var(--modoOscuroModal);
     color: var(--textoModoOcuro);
     font-size: 15px;
     position: absolute;
@@ -137,9 +137,13 @@ aside.form-img{
 
 }
 
-aside.form-img button.x{
-    background-color:transparent;
+aside.form-img button.btn-x{
     align-self:flex-end;
+    /* color: red; */
+    border-radius: 5px;
+    border: 2px solid red;
+    font-size: 30px;
+    padding: 2px;
 }
 
 aside.form-img button.reestablecer-f, select{
@@ -180,11 +184,104 @@ aside.form-img button.x, button.reestablecer-f{
     border-radius: 50%;
     margin:5px ;
     background-color: #deb887;
+}
+
+/*****paleta de colores***/
+
+div#cont-paleta-color{
+    width: 240px;
+    height: 300px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    box-shadow:10px 10px 10px 10px rgba(22, 22, 22, 0.921);
+    background-color: var(--modoOscuroModal);
+  /*  position:absolute;
+    right: 2%;
+    top: 33%;
+    posicion ok!  no funciona ass remove*/
+}
+
+#cont-paleta-color .cont-sel-color{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #1b5fa8;
 
 }
+
+#cont-paleta-color .cont-sel-color .color-elegido{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+#cont-paleta-color .paleta{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#cont-paleta-color .paleta div{
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    background-color: #7b531e;
+}
+
+#cont-paleta-color .paleta div.red{
+    background-color: #ff0000;
+}
+
+#cont-paleta-color .paleta div.l-blue{
+    background-color: #6ac4ee;
+}
+
+#cont-paleta-color .paleta div.blue{
+    background-color: #0000ff;
+}
+
+#cont-paleta-color .paleta div.green{
+    background-color: #09ab09;
+}
+
+#cont-paleta-color .paleta div.pink{
+    background-color: #e738e1;
+}
+
+#cont-paleta-color .paleta div.yellow{
+    background-color: #ffff00;
+}
+
+.black{
+    background-color: #000000;
+}
+
+#cont-paleta-color .paleta div.white{
+    background-color: #ffffff;
+}
+#cont-paleta-color .paleta div.open{
+    display: flex;
+}
+#cont-paleta-color .cont-est-canc{
+    width: 100%;
+    text-align: end;
+}
+
+#cont-paleta-color button{
+    color: #1253a2;
+    margin: 10px;
+    font-weight: bold;
+}
+
 .form-img label{
     margin: 5px;
 }
+
 .form-img h4{
     padding: 10PX;
     margin: 5pX;
@@ -192,7 +289,7 @@ aside.form-img button.x, button.reestablecer-f{
 }
 .cont-range, select, input{
     width: 100%;
-    color: var(--modoOscuroInput);
+    /* color: var(--modoOscuroInput); */
     margin:5px ;
 }
 
@@ -207,10 +304,6 @@ aside.form-img button.x, button.reestablecer-f{
     transition: background 0.5s linear ;
     background-color: var(--modoClaroHeader  ); 
 
-}
-
-.open{
-    display: flex;
 }
 
 .close{

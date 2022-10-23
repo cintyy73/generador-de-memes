@@ -88,7 +88,7 @@
            
         </main>
         <aside z-index="100" class="form-img">
-            <button class="btn-x">x</button>
+            <button class="btn-x">&times</button>
             <form action="">
                 <h2>IMAGEN</h2>
 
@@ -100,15 +100,13 @@
                 <label for="fondo">FONDO</label>
                 <br>
                 <div class="cont-fondo">
-                    <div class="color">
-                        <div class="circulo"></div>
+                    <button class="color">
+                        <div class="circulo">
+                            
+                        </div>
                         <p class="sexag">#FFFFF</p>
-                    </div>
-                <!--  <div class="cont-color">
-                        <h4>Seleccionar color</h4> 
-                        <div class="color-select"></div>
-
-                    </div> -->
+                    </button>
+                <!-- paleta de colores -->
                     <select type="radio" name="option-color" id="option-color">
                         <option  value="ninguno">Ninguno</option>
                         <option value="aclarar">Aclarar</option>
@@ -164,15 +162,35 @@
                 <div class="cont-range">
                     <input type="range" id="negativo" min="0" max="100" value="0">
                 </div>
+                <button class="establecer-f">Establecer filtros</button>
             </form>
-            <button class="reestablecer-f">Reestablecer filtros</button>
         </aside>
     
-    </section>
-
-
-
-
+        
+        <div id="cont-paleta-color">
+            <div class="cont-sel-color ">
+                <h4>Seleccionar color</h4> 
+                <div class="color-elegido"></div>
+            </div>
+            <div class="paleta">
+                <div class="red"></div>
+                <div class="l-blue"></div>
+                <div class="blue"></div>
+                <div class="green"></div>
+                <div class="pink"></div>
+                <div class="yellow"></div>
+                <div class="black"></div>
+                <div class="white"></div>
+            </div>
+        <span class="mas">Más</span>
+        <div class="cont-est-canc">
+            <button class="cancelar">Cancelar</button>
+            <button class="establecer">Establecer</button>
+        </div>
+    </div>
+    
+</section>
+    
     <script src="./app.js"></script>   
 </body>
 </html>
