@@ -122,7 +122,9 @@ div.container div.top-text, div.bottom-text h2{
 
 /* *******modal img***** */
 
-aside#form-img{
+aside#form-img, 
+aside#form-txt,
+aside#form-txt-bg{
     width: 20%;
     flex-direction: column;
     padding: 20px;
@@ -136,20 +138,26 @@ aside#form-img{
 
 }
 
-aside#form-img button.btn-x{
+aside#form-img button.btn-x, 
+aside#form-txt button.btn-x-txt,
+aside#form-txt-bg button.btn-x-txt-bg{
     align-self:flex-end;
-    /* color: red; */
     border-radius: 5px;
     border: 2px solid red;
     font-size: 30px;
     padding: 2px;
 }
 
-aside#form-img button.reestablecer-f, select{
+aside#form-img button.reestablecer-f, select, 
+aside#form-txt button.reestablecer-f-txt, select,
+aside#form-txt button.reestablecer-f-txt-bg, select{
     background-color: var(--modoOscuroInput);
     margin-left: 3px;
 }
-aside#form-img button.x, button.reestablecer-f{
+
+aside#form-img button.x, button.reestablecer-f, 
+aside#form-txt button.x-txt, button.reestablecer-f-txt,
+aside#form-txt-bg button.x-txt-bg, button.reestablecer-f-txt-bg{
     width: fit-content;
     padding: 5px;
     border: none;
@@ -158,17 +166,24 @@ aside#form-img button.x, button.reestablecer-f{
 
 }
 
-#form-img h2{
+#form-img h2, 
+#form-txt h2,
+#form-txt-bg h2{
     text-align: center;
     margin: 5pX;
 }
 
-.cont-fondo{
+.cont-fondo,
+.cont-fondo-txt,
+.cont-fondo-txt-bg{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.color{
+
+.color, 
+.color-txt, 
+.color-txt-bg{
     display: flex;
     align-items: center;
     background-color: var(--modoOscuroInput);
@@ -177,7 +192,9 @@ aside#form-img button.x, button.reestablecer-f{
 
 }
 
-.color .circulo{
+.color .circulo, 
+.color-txt .circulo-txt, 
+.color-txt-bg .circulo-txt-bg {
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -185,9 +202,33 @@ aside#form-img button.x, button.reestablecer-f{
     background-color: #deb887;
 }
 
+aside#form-txt .cont-cheak-txt, .bg-transp,
+aside#form-txt-bg .cont-cheak-txt-bg, .bg-transp{
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+}
+
+aside#form-txt .cont-color-txt, .container-color-txt, 
+.container-color-txt-bg, .cont-color-txt-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+aside#form-txt label, div, button{
+    padding: 3px;
+}
+
+aside#form-txt button{
+   margin: 3px;
+}
 /*****paleta de colores***/
 
-div#cont-paleta-color{
+div#cont-paleta-color, 
+div#cont-paleta-color-txt, 
+div#cont-paleta-color-txt-bg{
     width: 240px;
     height: 300px;
     justify-content: space-around;
@@ -200,7 +241,9 @@ div#cont-paleta-color{
     top: 33%;
 }
 
-#cont-paleta-color .cont-sel-color{
+#cont-paleta-color .cont-sel-color,
+#cont-paleta-color-txt .cont-sel-color-txt,
+#cont-paleta-color-txt-bg .cont-sel-color-txt-bg{
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -209,13 +252,17 @@ div#cont-paleta-color{
 
 }
 
-#cont-paleta-color .cont-sel-color .color-elegido{
+#cont-paleta-color .cont-sel-color .color-elegido,
+#cont-paleta-color-txt .cont-sel-color-txt .color-elegido-txt,
+#cont-paleta-color-txt-bg .cont-sel-color-txt-bg .color-elegido-txt-bg{
     width: 30px;
     height: 30px;
     border: 1px solid black;
 }
 
-#cont-paleta-color .paleta{
+#cont-paleta-color .paleta,
+#cont-paleta-color-txt .paleta-txt,
+#cont-paleta-color-txt-bg .paleta-txt-bg{
     display: flex;
     flex-wrap: wrap ;
     justify-content: center;
@@ -223,53 +270,77 @@ div#cont-paleta-color{
 
 }
 
-#cont-paleta-color .paleta div{
+#cont-paleta-color .paleta div,
+#cont-paleta-color-txt .paleta-txt div,
+#cont-paleta-color-txt-bg .paleta-txt-bg div{
     width: 50px;
     height: 50px;
     margin: 2px;
     background-color: #7b531e;
 }
 
-#cont-paleta-color .paleta div.red{
+#cont-paleta-color .paleta div.red,
+#cont-paleta-color-txt .paleta-txt div.red-txt,
+#cont-paleta-color-txt-bg .paleta-txt-bg div.red-bg{
     background-color: #ff0000;
 }
 
-#cont-paleta-color .paleta div.l-blue{
+#cont-paleta-color .paleta div.l-blue,
+#cont-paleta-color-txt .paleta-txt div.l-blue-txt,
+#cont-paleta-color-txt-bg .paleta-txt-bg div.l-blue-bg{
     background-color: #6ac4ee;
 }
 
-#cont-paleta-color .paleta div.blue{
+#cont-paleta-color .paleta div.blue,
+#cont-paleta-color-txt .paleta-txt div.blue-txt,
+#cont-paleta-color-txt-bg .paleta-txt-bg div.blue-bg{
     background-color: #0000ff;
 }
 
-#cont-paleta-color .paleta div.green{
+#cont-paleta-color .paleta div.green,
+#cont-paleta-color-txt .paleta-txt div.green-txt,
+#cont-paleta-color-txt-bg .paleta-txt-bg div.green-bg{
     background-color: #09ab09;
 }
 
-#cont-paleta-color .paleta div.pink{
+#cont-paleta-color .paleta div.pink,
+#cont-paleta-color-txt .paleta-txt div.pink-txt,
+#cont-paleta-color-txt-bg .paleta-txt-bg div.pink-bg{
     background-color: #e738e1;
 }
 
-#cont-paleta-color .paleta div.yellow{
+#cont-paleta-color .paleta div.yellow,
+#cont-paleta-color-txt .paleta-txt div.blue-txt,
+#cont-paleta-color-txt-bg .paleta-txt-bg div.blue-bg{
     background-color: #ffff00;
 }
 
-.black{
+.black,
+#cont-paleta-color-txt .paleta-txt div.black-txt,
+#cont-paleta-color-txt-bg .paleta-txt-bg div.black-bg{
     background-color: #000000;
 }
 
-#cont-paleta-color .paleta div.white{
+#cont-paleta-color .paleta div.white,
+#cont-paleta-color-txt .paleta-txt div.white-txt,
+#cont-paleta-color-txt-bg .paleta-txt-bg div.white-bg{
     background-color: #ffffff;
 }
-#cont-paleta-color .paleta div.open{
+#cont-paleta-color .paleta div.open,
+#cont-paleta-color-txt .paleta-txt div.open-txt,
+#cont-paleta-color-txt-fg .paleta-txt-bg div.open-txt-bg{
     display: flex;
 }
-#cont-paleta-color .cont-est-canc{
+#cont-paleta-color .cont-est-canc,
+#cont-paleta-color-txt .cont-est-canc-txt,
+#cont-paleta-color-txt-bg .cont-est-canc-txt-bg{
     width: 100%;
     text-align: end;
 }
 
-#cont-paleta-color button{
+#cont-paleta-color button,
+#cont-paleta-color-txt button,
+#cont-paleta-color-txt-bg button{
     color: #1253a2;
     margin: 10px;
     font-weight: bold;
