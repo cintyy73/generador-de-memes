@@ -117,7 +117,16 @@ const cambiarBGtxtI = () => {
     contTxtBottom.style.backgroundColor = valorColorInputTxtBg;
     contTxtTop.style.backgroundColor = color
 }
-
+// img
+const actualizarImg = (e)=>{
+    console.log(e.target.value)
+    console.log(contImg)
+    contImg.innerHTML=`
+    <div class="style-img">
+        <img class="style-img" src="${e.target.value}" alt="">
+    </div>`
+        
+}
 // btn descarga
 const dowloandMeme =  () =>{
     domtoimage.toBlob($('.img-descargarr')).then(function(blob){
@@ -156,12 +165,8 @@ btnX.addEventListener("click", () => {
 
 
 /*****url image****** */
+urlImg.addEventListener("input",actualizarImg)
 
-// urlImg.addEventListener("focus",(e)=>{
-//     let img = urlImg.event.value;
-//     console.log(img)
-//     containerImG.innerHTML=`<img src="${img}">`
-// })
 //CONTAINER COLOR
 
 btnAbrir.addEventListener("click", () => {
@@ -229,10 +234,8 @@ white.addEventListener("click", () => {
 
 
 /***********Dowloand********/
-dowloand.addEventListener("click", () =>{
-    dowloandMeme()
-    console.log("sale")
-});
+dowloand.addEventListener("click",dowloandMeme)
+
 
 /*-----modal configuracion txt---------*/
 
