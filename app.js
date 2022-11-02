@@ -10,6 +10,18 @@ const btnX = $(".btn-x");
 const btnLi = $(".hover");
 const contImg = $(".container-img");
 const urlImg = $("#url-img");
+const imgFiltros = $("#imgFiltros");
+// filtros
+const brillo = $("#brillo");
+console.log(brillo)
+const opacidad = $("#opacidad");
+const contraste = $("#contraste");
+const desenfoque = $("#desenfoque");
+const grises = $("#grises");
+const sepia = $("#sepia");
+const hue = $("#hue");
+const saturado = $("#saturado");
+const negativo = $("#negativo");
 const contTxtBottom = $(".bottom-text");
 const contTxtTop = $(".top-text");
 const circulo = $(".circulo");
@@ -21,6 +33,7 @@ const elegidoInputColor = $("#input-color");
 const contInputColor = $(".cont-est-canc");
 const divInputColor = $(".cont-input-color");
 const btnEstablecer = $(".establecer");
+const reestablecerF = $(".reestablecer-f");
 const paleta = $(".paleta");
 const red = $(".red");
 const lBlue = $(".l-blue");
@@ -38,6 +51,7 @@ const btnAbrirTxt = $("#abrir-paleta-txt");
 const contPaletaTxt = $("#cont-paleta-color-txt");
 const cancelarTxt = $(".cancelar-txt");
 const btnEstablecerTxt = $(".establecer-txt");
+const divInputColorTxt = $(".cont-input-color-txt");
 
 const redTxt = $(".red-txt");
 const lBlueTxt = $(".l-blue-txt");
@@ -56,6 +70,8 @@ const btnAbrirBg = $("#abrir-paleta-txt-bg");
 
 const cancelarBg = $(".cancelar-txt-bg");
 const btnEstablecerBg = $(".establecer-txt-bg");
+const divInputColorBg = $(".cont-input-color-txt-Bg");
+// console.log(divInputColorBg)
 
 const redBg = $(".red-bg");
 const lBlueBg = $(".l-blue-bg");
@@ -71,10 +87,6 @@ const containerImg = $(".container-img")
 const btnTxt= $(".btn-txt")
 const modalTxt = $("#form-txt")
 const btnXtxt = $(".btn-x-txt")
-console.log(btnXtxt)
-console.log(modalTxt)
-
-
 
 /*---- --------FUNCIONES-------------*/
 // color
@@ -97,40 +109,57 @@ const cambiarColorTxt = (color) => {
     contTxtBottom.style.color = color
 }
 const cambiarColorTxtI = () => {
+    console.log("funciona")
     let valorColorInputTxt = elegidoInputColorTxt.value;
+    console.log(valorColorInputTxt)
     colorElegidoTxt.backgroundcolor = valorColorInputTxt;
     circuloTxt.style.backgroundColor = valorColorInputTxt;
     contTxtBottom.style.color = valorColorInputTxt;
-    contTxtTop.style.backgroundColor = color
+    contTxtTop.style.color = valorColorInputTxt;
 }
 
 const cambiarColorBgTxt = (color) => {
-    colorElegidoTxtBg.style.backgroundColor = color
-    circuloTxtBg.style.backgroundColor = color
-    contTxtTop.style.backgroundColor = color
-    contTxtBottom.style.backgroundColor = color
+    colorElegidoTxtBg.style.backgroundColor = color;
+    circuloTxtBg.style.backgroundColor = color;
+    contTxtTop.style.backgroundColor = color;
+    contTxtBottom.style.backgroundColor = color;
 }
-const cambiarBGtxtI = () => {
+const cambiarBgTxtI = () => {
     let valorColorInputTxtBg = elegidoInputColorTxtBg.value;
     colorElegidoTxtBg.style.backgroundColor = valorColorInputTxtBg;
     circuloTxtBg.style.backgroundColor = valorColorInputTxtBg;
     contTxtBottom.style.backgroundColor = valorColorInputTxtBg;
-    contTxtTop.style.backgroundColor = color
+    contTxtTop.style.backgroundColor = valorColorInputTxtBg;
 }
+
 // img
 const actualizarImg = (e)=>{
     console.log(e.target.value)
     console.log(contImg)
     contImg.innerHTML=`
     <div class="style-img">
-        <img class="style-img" src="${e.target.value}" alt="">
+    <img class="style-img" id="imgFiltros" src="${e.target.value}" alt="">
     </div>`
-        
+    
 }
+// filtros
+const aplicarF = ( ) =>{
+    let brilloV = brillo.value;
+    let opacidadV = opacidad.value;
+    let contrasteV = contraste.value;
+    let desenfoqueV = desenfoque.value;
+    let grisesV = grises.value;
+    let  sepiaV = sepia.value;
+    let hueV = hue.value;
+    let saturadoV = saturado.value;
+    let negativoV = negativo.value;
+    imgFiltros.style.filter = `brigthness(${brilloV}) opacity(${opacidadV}) contrast(${contrasteV}%) blur(${desenfoqueV}px) grayscale(${grisesV}%) sepia(${sepiaV}%) hue-rotate(${hueV}deg) saturate(${saturadoV}%) invert(${negativoV});`
+} //me tira error rn style                                                                                                                                                                                                                                                            
+
 // btn descarga
 const dowloandMeme =  () =>{
-    domtoimage.toBlob($('.img-descargarr')).then(function(blob){
-        SVGAnimatedPreserveAspectRatio(blob,"mi-meme.png");
+    domtoimage.toBlob($('.container')).then(function(blob){
+        saveAs(blob,"mi-meme.png");
     });
 };
 
@@ -186,10 +215,9 @@ btnEstablecer.addEventListener("click",()=>{
     contPaleta.classList.remove("open");
 })
 
-// cancelarTxt.addEventListener("click", () => {
-//     contPaleta.classList.add("close");
-//     contPaleta.classList.remove("open");
-//     cambiarFondoDiv("black");
+reestablecerF.addEventListener("click",()=>{
+    contImg.classList.add("reestablecerF");
+})
 
 // })
 
@@ -257,7 +285,7 @@ btnAbrirTxt.addEventListener("click", () => {
 cancelarTxt.addEventListener("click", () => {
     contPaletaTxt.classList.add("close");
     contPaletaTxt.classList.remove("open");
-    cambiarColorTxt("white");
+    cambiarColorTxt("black");
 
 })
 
@@ -276,16 +304,17 @@ btnAbrirBg.addEventListener("click", () => {
 cancelarBg.addEventListener("click", () => {
     contPaletaBg.classList.add("close");
     contPaletaBg.classList.remove("open");
-    cambiarColorTxt("white");
-
+    cambiarColorBgTxt("white");
 })
 
-btnEstablecerTxt.addEventListener("click",()=>{
-    contPaletaTxt.classList.add("close");
-    contPaletaTxt.classList.remove("open");
+btnEstablecerBg.addEventListener("click",()=>{
+    contPaletaBg.classList.add("close");
+    contPaletaBg.classList.remove("open");
 })
 
-divInputColor.addEventListener("change", (e) => {
+/*colores txt*/
+
+divInputColorTxt.addEventListener("change", (e) => {
     cambiarColorTxtI();
 });
 
@@ -321,22 +350,12 @@ whiteTxt.addEventListener("click", () => {
     cambiarColorTxt("white");
 })
 
-/*cloro bg*/
-cancelarBg.addEventListener("click", () => {
-    contPaletaTxt.classList.add("close");
-    contPaletaTxt.classList.remove("open");
-    cambiarColorTxt("white");
+/*color bg*/
 
-})
 
-btnEstablecerTxt.addEventListener("click",()=>{
-    contPaletaTxt.classList.add("close");
-    contPaletaTxt.classList.remove("open");
-})
-
-divInputColor.addEventListener("change", (e) => {
-    cambiarColorTxtI();
-});
+// divInputColorBg.addEventListener("change", (e) => {
+//     cambiarBgTxtI();
+// });
 
 redBg.addEventListener("click", () => {
     cambiarColorBgTxt("red");
@@ -369,3 +388,21 @@ blackBg.addEventListener("click", () => {
 whiteBg.addEventListener("click", () => {
     cambiarColorBgTxt("white");
 })
+
+// filtros
+brillo.addEventListener("change",()=>{
+    contImg.classList.remove("reestablecerF");
+    aplicarF()
+    console.log(brillo.value)
+    console.log(contImg)
+
+}); //aplico remove o no?????
+
+opacidad.addEventListener("change",aplicarF);
+contraste.addEventListener("change",aplicarF);
+desenfoque.addEventListener("change",aplicarF);
+grises.addEventListener("change",aplicarF);
+sepia.addEventListener("change",aplicarF);
+hue.addEventListener("change",aplicarF);
+saturado.addEventListener("change",aplicarF);
+negativo.addEventListener("change",aplicarF);

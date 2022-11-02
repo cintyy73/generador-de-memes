@@ -124,49 +124,49 @@
 
                 <div class="cont-range">
                     <label for="brillo">BRILLO</label>
-                    <input type="range" id="brillo" min="0" max="100" value="0">
+                    <input type="range" id="brillo" min="0" max="1" step="0.1">
                 </div>
                 
                 <div class="cont-range">
                     <label for="opacidad">OPACIDAD</label>
-                    <input type="range" id="opacidad" min="0" max="100" value="0">
+                    <input type="range" id="opacidad" min="0" max="1" step="0.1">
                 </div>
                 
                 <div class="cont-range">
                     <label for="contraste">CONTRASTE</label>
-                    <input type="range" id="contraste" min="0" max="100" value="0">
+                    <input type="range" id="contraste" min="100" max="1000" step="1" >
                 </div>
                 
                 <div class="cont-range">
                     <label for="desenfoque">DESENFOQUE</label>
-                    <input type="range" id="desenfoque" min="0" max="100" value="0">
+                    <input type="range" id="desenfoque" min="0" max="10" step="0.1">
                 </div>
 
                 <div class="cont-range">
                     <label for="grises">ESCALA DE GRISES</label>
-                    <input type="range" id="grises" min="0" max="100" value="0">
+                    <input type="range" id="grises" min="0" max="100" step="1">
                 </div>
 
                 <div class="cont-range">
                     <label for="sepia">SEPIA</label>
-                    <input type="range" id="sepia" min="0" max="100" value="0">
+                    <input type="range" id="sepia" min="0" max="100"step="0.1">
                 </div>
 
                 <div class="cont-range">
                     <label for="hue">HUE</label>
-                    <input type="range" id="hue" min="0" max="100" value="0">
+                    <input type="range" id="hue" min="0" max="359" step="1">
                 </div>
 
                 <div class="cont-range">
                     <label for="saturado">SATURADO</label>
-                    <input type="range" id="saturado" min="0" max="100" value="0">
+                    <input type="range" id="saturado" min="100" max="1000" step="10">
                 </div>
 
                 <div class="cont-range">
                     <label for="negativo">NEGATIVO</label>
-                    <input type="range" id="negativo" min="0" max="100" value="0">
+                    <input type="range" id="negativo" min="0" max="1" step="1">
                 </div>
-                <button  type="submit" class="establecer-f">Establecer filtros</button>
+                <button  type="button" class="reestablecer-f">Reestablecer filtros</button>
             </form>
         </aside>
         <aside z-index="100" id="form-txt" class="close">
@@ -242,7 +242,6 @@
 
 
         <!-----------CONTAINER: COLOR  ----------->
-    <!-- <button >open</button> -->
 
         <div id="cont-paleta-color" class="close" >
             <div class="cont-sel-color ">
