@@ -81,11 +81,11 @@
                 <div class="container">
                     <div class="top-text">
                         <!-- agregar input para q el target.value inserte el texto -->
-                        <h2>TOP TEXT</h2>
+                        <h2 class="txt-top">TOP TEXT</h2>
                     </div>
                     <div class="container-img"></div>
                     <div class="bottom-text">
-                        <h2>BOTTOM TEXT</h2>
+                        <h2 class="txt-bottom">BOTTOM TEXT</h2>
                     </div>
                 </div>              
     
@@ -112,12 +112,12 @@
                     </button>
                 <!-- aca va  paleta de colores -->
                     <select type="radio" name="option-color" id="option-color">
-                        <option  value="ninguno">Ninguno</option>
-                        <option value="aclarar">Aclarar</option>
-                        <option value="oscurecer">Oscurecer</option>
-                        <option value="diferencia">Diferencia</option>
-                        <option value="luminosidad">Luminosidad</option>
-                        <option value="multiplicar">Multiplicar</option>
+                        <option  value="normal">Ninguno</option>
+                        <option value="hardLight">Aclarar</option>
+                        <option value="darken">Oscurecer</option>
+                        <option value="difference">Diferencia</option>
+                        <option value="luminosity">Luminosidad</option>
+                        <option value="multiply">Multiplicar</option>
                     </select>
                 </div>
                 <h4>FILTROS</h4>
@@ -173,28 +173,44 @@
             <button class="btn-x-txt">&times</button>
             <h2>TEXTO</h2>
             <div class="cont-txt-top">
-                <label for="txt-top">SUPERIOR</label>
+                <label for="top-text">SUPERIOR</label>
                 <br>    
                 <input type="text" id="top-text" placeholder="TOP TEXT">
                 <br>
             </div>
-            <div class="cont-cheak-txt">
+            <div class="cont-check-txt">
                 <input type="checkbox" id="txt-none">
                 <label for="txt-none">Sin texto superior</label>
             </div>
             <div class="cont-txt-bottom">
-                <label for="txt-bottom">INFERIOR</label>
+                <label for="bottom-text">INFERIOR</label>
                 <br>    
                 <input type="text" id="bottom-text" placeholder="BOTTOM TEXT">
                 <br>
             </div>
-            <div class="cont-cheak-txt">
+            <div class="cont-check-txt">
                 <input type="checkbox" id="txt-bottom-none">
                 <label for="txt-bottom-none">Sin texto inferior</label>
             </div>
             <div class="cont-fonts">
                 <label for="font">FUENTE</label>
-                <input type="select">
+                <select type="radio" name="fuente" id="fuente">
+                    <option value="Arial">Arial</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="Andale Mono">Andale Mono</option>
+                    <option value="Comic Sans MS">ComicSansMS</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+            </div>
+            <div class="cont-font-size">
+                <input type="number" id="font-size" min="1" max="40" placeholder="size">
+            </div>
+            <div class="text-aligne">
+                <button type="button" id="centrado">▣</button>
+                <button type="button" id="izquierda">◧</button>
+                <button type="button" id="derecha">◨</button>
             </div>
             <div class="container-color-txt">
                 <div class="cont-color-txt">
@@ -220,23 +236,23 @@
                 <label for="contorno">CONTORNO</label>
                 <br>
                 <div class="cont-btn-contorno">
-                    <button class="btn-contorno-ninguno">Ninguno</button>
-                    <button class="btn-contorn-claro">Claro</button>
-                    <button class="btn-contorn-oscuro">Oscuro</button>
+                    <button type="button" class="btn-contorno-ninguno">Ninguno</button>
+                    <button type="button" class="btn-contorno-claro">Claro</button>
+                    <button type="button" class="btn-contorno-oscuro">Oscuro</button>
                 </div>
             </div>
             <div class="espaciado">
                 <label for="espaciado">ESPACIADO</label>
-                <input type="number" id="espaciado">
-            </div>
+                <input type="number" min="0" max="15"  id="espaciado">
+            </div> 
             <div class="interlinaedo">
                 <label for="interlineado">INTERLINEADO</label>
-                <input type="select" id="interlineado" value="0.8" placeholder="0.8">
-                <input type="select" id="interlineado" value="1" placeholder="1">
-                <input type="select" id="interlineado" value="1.2" placeholder="1.2">
-                <input type="select" id="interlineado" value="1.5" placeholder="1.5">
-                <input type="select" id="interlineado" value="2" placeholder="2">
-                <input type="select" id="interlineado" value="2.5" placeholder="2.5">
+                <input type="select" id="interlineadoA" value="0.8" placeholder="0.8">
+                <input type="select" id="interlineadoB" value="1" placeholder="1">
+                <input type="select" id="interlineadoC" value="1.2" placeholder="1.2">
+                <input type="select" id="interlineadoD" value="1.5" placeholder="1.5">
+                <input type="select" id="interlineadoE" value="2" placeholder="2">
+                <input type="select" id="interlineadoF" value="2.5" placeholder="2.5">
             </div>    
         </aside>
 
@@ -319,6 +335,6 @@
     </section>
     <script src="./app.js"></script>   
 </body>
-</html>º   
+</html>
  
  
