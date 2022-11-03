@@ -10,7 +10,7 @@ const btnX = $(".btn-x");
 const btnLi = $(".hover");
 const contImg = $(".container-img");
 const urlImg = $("#url-img");
-const imgFiltros = $("#imgFiltros");
+let imgFiltros;
 const colorP = $(".sexag"); 
 const colorPtxt = $(".sexag-txt"); 
 const colorPbg = $(".sexag-txt-bg"); 
@@ -254,7 +254,8 @@ const aplicarF = ( ) =>{
     let hueV = hue.value;
     let saturadoV = saturado.value;
     let negativoV = negativo.value;
-    // imgFiltros.style.filter = `brigthness(${brilloV}) opacity(${opacidadV}) contrast(${contrasteV}%) blur(${desenfoqueV}px) grayscale(${grisesV}%) sepia(${sepiaV}%) hue-rotate(${hueV}deg) saturate(${saturadoV}%) invert(${negativoV});`
+    imgFiltros= $("#imgFiltros");
+ imgFiltros.style.filter = `brightness(${brilloV})`/* opacity(${opacidadV}) contrast(${contrasteV}%) blur(${desenfoqueV}px) grayscale(${grisesV}%) sepia(${sepiaV}%) hue-rotate(${hueV}deg) saturate(${saturadoV}%) invert(${negativoV})`;*/
 } //me tira error rn style                     
 
 // btn descarga
@@ -304,7 +305,7 @@ btnEstablecer.addEventListener("click",()=>{
 })
 
 reestablecerF.addEventListener("click",()=>{
-    contImg.classList.add("reestablecerF");
+    imgFiltros.classList.add("reestablecerF");
 })
 
 //color texto
@@ -528,7 +529,6 @@ espaciadoI.addEventListener("change", (e)=>{
 
 //interlineado
 const interl = (e) =>{
-
     const valorInter = e.target.value;
     console.log(valorInter)
     txtTopI.style.lineHeight = valorInter;
@@ -543,10 +543,7 @@ interlineadoF.addEventListener("click",interl);
 
 // filtros
 brillo.addEventListener("change",()=>{
-    contImg.classList.remove("reestablecerF");
     aplicarF()
-    console.log(brillo.value)
-    console.log(contImg)
 
 }); //aplico remove o no?????
 
