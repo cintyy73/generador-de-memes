@@ -134,11 +134,7 @@ const abrirModalImg = () => {
     modalImg.classList.remove("open");
 }
 
-// menú opciones fondo
-const aplicarModos = (e) =>{
-    let opcionModo = e.target.value;
-    contImg.style.backgroundBlendMode= opcionModo
-}
+
 
 //fuentes 
 const aplicarFuente = (e) =>{
@@ -264,6 +260,12 @@ const aplicarF = ( ) =>{
     imgFiltros= $("#imgFiltros");
     imgFiltros.style.filter = `brightness(${brilloV}) opacity(${opacidadV})  contrast(${contrasteV}%) blur(${desenfoqueV}px) grayscale(${grisesV}%) sepia(${sepiaV}%) hue-rotate(${hueV}deg) saturate(${saturadoV}%) invert(${negativoV})`;
 }                 
+// menú opciones fondo
+const aplicarModos = (e) =>{
+    imgFiltros= $("#imgFiltros");
+    let opcionModo = e.target.value;
+    imgFiltros.style.backgroundBlendMode = opcionModo;
+}
 
 //restablecer filtros
 const restFiltros = ()=>{
