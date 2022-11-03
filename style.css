@@ -70,12 +70,10 @@ main{
     min-width: 100vw;
     display: flex;
     justify-content: center;
-    /* position: relative; */
     transition: background 0.5s linear;
 
 }
 .meme{
-    /* width: 60%; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -333,11 +331,13 @@ div#cont-paleta-color-txt-bg{
 #cont-paleta-color-txt-bg .paleta-txt-bg div.white-bg{
     background-color: #ffffff;
 }
+
 #cont-paleta-color .paleta div.open,
 #cont-paleta-color-txt .paleta-txt div.open-txt,
 #cont-paleta-color-txt-fg .paleta-txt-bg div.open-txt-bg{
     display: flex;
 }
+
 #cont-paleta-color .cont-est-canc,
 #cont-paleta-color-txt .cont-est-canc-txt,
 #cont-paleta-color-txt-bg .cont-est-canc-txt-bg{
@@ -384,38 +384,25 @@ div#cont-paleta-color-txt-bg{
 .open{
     display: flex;
 }
+
 .close{
     display: none;
 }
 
-.reestablecerF{
-    filter: brightness(1) 
-            opacity(1) 
-            contrast(100%)
-            blur(0px)
-            grayscale(0%)
-            sepia(0)
-            hue-rotate(0deg)
-            saturate(100%)
-            invert(0);
-}
-
-
 .contClaro {
     -webkit-text-stroke-color:  #b7dde8;
     -webkit-text-stroke-width: 2px;
-    
 }
 
 .contOscuro {
     -webkit-text-stroke-color: #040404;
     -webkit-text-stroke-width: 2px;
-
 }
 
 .transparent{
-    background: transparent;
+    background: tr;
 }
+
 /* RESPONSIVE DESIGN */
 
 /* ***** MOBILE *****/

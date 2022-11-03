@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,22 +12,26 @@
     <link rel="stylesheet" href="./style.css">
 
     <!-- lib cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- title -->
     <title>Proyecto Final Módulo 02</title>
 
     <!-- google -->
-    <meta name="googlebot" content="index,follow" /> 
+    <meta name="googlebot" content="index,follow" />
     <meta name="robots" content="index,follow" />
     <meta name="googlebot" content="index,follow" />
 
     <!-- verification -->
     <meta name="google-site-verification" content="fAjkkpSNXl6APJ6nujDAS2MdFzS2Fu7oz68r8j4xIw8" />
-    
-    <meta name="subject" content="Proyecto de Cintia Páez. Generador de memes"/>
+
+    <meta name="subject" content="Proyecto de Cintia Páez. Generador de memes" />
     <meta name="referrer" content="no-referrer" />
 
     <!-- GEO tags -->
@@ -42,12 +47,9 @@
     <meta property="og:url" content="./assets/mi-generador-de-memes.png" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Generador de memes" />
-    <meta property="og:image"
-        content="./assets/mi-generador-de-memes.png" />
-    <meta property="og:image" name="twitter:image"
-        content="./assets/mi-generador-de-memes.png" />
-    <link rel="apple-touch-icon"
-        href="./assets/mi-generador-de-memes.png" />
+    <meta property="og:image" content="./assets/mi-generador-de-memes.png" />
+    <meta property="og:image" name="twitter:image" content="./assets/mi-generador-de-memes.png" />
+    <link rel="apple-touch-icon" href="./assets/mi-generador-de-memes.png" />
     <meta property="og:description" name="twitter:description" content="App para que puedas crear tu propio meme." />
     <meta name="theme-color" content="#98fb98" />
     <meta name="twitter:card" content="summary" />
@@ -57,8 +59,10 @@
     <meta property="og:locale" content="AR-S" />
     <meta property="article:author" content="https://www.facebook.com/cintyy73/" />
 </head>
+
 <body>
-    <section id="first">   
+    <section id="first">
+        <!-- HEADER -->
         <header>
             <h1>Generador de Memes</h1>
             <nav>
@@ -66,53 +70,53 @@
                     <li>
                         <button class="btn-img hover">🎴 Imagen</button>
                     </li>
-                        <li>
+                    <li>
                         <button class="btn-txt hover">✍ Texto</button>
                     </li>
                     <li>
                         <button class="modo-claro hover">😎 Modo claro</button>
                     </li>
-                </ul>    
+                </ul>
             </nav>
         </header>
-        
+        <!-- FIN HEADER -->
+        <!-- MAIN -->
         <main>
             <div class="meme">
+                <!-- CONTENEDOR MEME -->
                 <div class="container">
                     <div class="top-text">
-                        <!-- agregar input para q el target.value inserte el texto -->
                         <h2 class="txt-top">TOP TEXT</h2>
                     </div>
                     <div class="container-img"></div>
                     <div class="bottom-text">
                         <h2 class="txt-bottom">BOTTOM TEXT</h2>
                     </div>
-                </div>              
-    
+                </div>
+                <!-- ****************** -->
                 <button class="dowloand">Descargar meme </button>
             </div>
-           
         </main>
+        <!-- **************************** -->
+
+        <!-- ASIDE PARA CONFIGURAR IMAGEN -->
         <aside z-index="100" id="form-img" class="close">
             <button class="btn-x">&times</button>
             <form action="">
                 <h2>IMAGEN</h2>
-
                 <input type="url" id="url-img" placeholder="Inserte url de imagen">
                 <br>
-
                 <label for="fondo">FONDO</label>
                 <br>
                 <div class="cont-fondo">
                     <button id="abrir-paleta" type="button" class="color">
-                        <div  class="circulo">
-                            
+                        <div class="circulo">
+
                         </div>
                         <p class="sexag">#FFFFF</p>
                     </button>
-                <!-- aca va  paleta de colores -->
                     <select type="radio" name="option-color" id="option-color">
-                        <option  value="normal">Ninguno</option>
+                        <option value="normal">Ninguno</option>
                         <option value="hardLight">Aclarar</option>
                         <option value="darken">Oscurecer</option>
                         <option value="difference">Diferencia</option>
@@ -124,57 +128,59 @@
 
                 <div class="cont-range">
                     <label for="brillo">BRILLO</label>
-                    <input type="range" id="brillo" min="0" max="1" step="0.1">
+                    <input type="range" id="brillo" min="0" max="5" step="0.1" value="1">
                 </div>
-                
+
                 <div class="cont-range">
                     <label for="opacidad">OPACIDAD</label>
-                    <input type="range" id="opacidad" min="0" max="1" step="0.1">
+                    <input type="range" id="opacidad" min="0" max="5" step="0.1" value="1">
                 </div>
-                
+
                 <div class="cont-range">
                     <label for="contraste">CONTRASTE</label>
-                    <input type="range" id="contraste" min="100" max="1000" step="1" >
+                    <input type="range" id="contraste" min="0" max="200" step="10" value="100">
                 </div>
-                
+
                 <div class="cont-range">
                     <label for="desenfoque">DESENFOQUE</label>
-                    <input type="range" id="desenfoque" min="0" max="10" step="0.1">
+                    <input type="range" id="desenfoque" min="0" max="5" step="0.1" value="0">
                 </div>
 
                 <div class="cont-range">
                     <label for="grises">ESCALA DE GRISES</label>
-                    <input type="range" id="grises" min="0" max="100" step="1">
+                    <input type="range" id="grises" min="0" max="100" step="10" value="0">
                 </div>
 
                 <div class="cont-range">
                     <label for="sepia">SEPIA</label>
-                    <input type="range" id="sepia" min="0" max="100"step="0.1">
+                    <input type="range" id="sepia" min="0" max="100" step="10" value="0">
                 </div>
 
                 <div class="cont-range">
                     <label for="hue">HUE</label>
-                    <input type="range" id="hue" min="0" max="359" step="1">
+                    <input type="range" id="hue" min="0" max="359" step="1" value="0">
                 </div>
 
                 <div class="cont-range">
                     <label for="saturado">SATURADO</label>
-                    <input type="range" id="saturado" min="100" max="1000" step="10">
+                    <input type="range" id="saturado" min="100" max="1000" step="10" value="100">
                 </div>
 
                 <div class="cont-range">
                     <label for="negativo">NEGATIVO</label>
-                    <input type="range" id="negativo" min="0" max="1" step="1">
+                    <input type="range" id="negativo" min="0" max="10" step="1" value="0">
                 </div>
-                <button  type="button" class="reestablecer-f">Reestablecer filtros</button>
+                <button type="button" class="reestablecer-f">Reestablecer filtros</button>
             </form>
         </aside>
+        <!-- ************************** -->
+        <!-- ASIDE PARA CONFIGURAR TEXTO -->
         <aside z-index="100" id="form-txt" class="close">
             <button class="btn-x-txt">&times</button>
             <h2>TEXTO</h2>
             <div class="cont-txt-top">
                 <label for="top-text">SUPERIOR</label>
-                <br>    
+                <br>
                 <input type="text" id="top-text" placeholder="TOP TEXT">
                 <br>
             </div>
@@ -184,7 +190,7 @@
             </div>
             <div class="cont-txt-bottom">
                 <label for="bottom-text">INFERIOR</label>
-                <br>    
+                <br>
                 <input type="text" id="bottom-text" placeholder="BOTTOM TEXT">
                 <br>
             </div>
@@ -205,6 +211,7 @@
                 </select>
             </div>
             <div class="cont-font-size">
+                <label for="font-size">TAMAÑO DE FUENTE</label>
                 <input type="number" id="font-size" min="1" max="40" placeholder="size">
             </div>
             <div class="text-aligne">
@@ -216,14 +223,14 @@
                 <div class="cont-color-txt">
                     <label for="color-txt">COLOR TEXTO</label>
                     <button id="abrir-paleta-txt" type="button" class="color-txt">
-                        <div  class="circulo-txt"></div>
+                        <div class="circulo-txt"></div>
                         <p class="sexag-txt">#FFFFF</p>
                     </button>
                 </div>
                 <div class="cont-color-txt-bg">
                     <label for="color-bg"> COLOR FONDO</label>
                     <button id="abrir-paleta-txt-bg" type="button" class="color-txt-bg">
-                        <div  class="circulo-txt-bg"></div>
+                        <div class="circulo-txt-bg"></div>
                         <p class="sexag-txt-bg">#FFFFF</p>
                     </button>
                 </div>
@@ -243,27 +250,27 @@
             </div>
             <div class="espaciado">
                 <label for="espaciado">ESPACIADO</label>
-                <input type="number" min="0" max="15"  id="espaciado">
-            </div> 
+                <input type="number" min="0" max="15" id="espaciado">
+            </div>
             <div class="interlinaedo">
-                <select name="interlineado" id="interlineado">INTERLINEADO
-                    <option type="radio" id="interlineadoA" value="0.8" placeholder="0.8">
-                    <option type="radio" id="interlineadoB" value="1" placeholder="1">
-                    <option type="radio" id="interlineadoC" value="1.2" placeholder="1.2">
-                    <option type="radio" id="interlineadoD" value="1.5" placeholder="1.5">
-                    <option type="radio" id="interlineadoE" value="2" placeholder="2">
-                    <option type="radio" id="interlineadoF" value="2.5" placeholder="2.5">
+                <label for="interlineado">INTERLINEADO</label>
+                <select name="interlineado" id="interlineado">
+                    <option type="radio" id="interlineadoA" value="0.8">0.8</option>
+                    <option type="radio" id="interlineadoB" value="1">1</option>
+                    <option type="radio" id="interlineadoC" value="1.2">1.2</option>
+                    <option type="radio" id="interlineadoD" value="1.5">1.5</option>
+                    <option type="radio" id="interlineadoE" value="2">2</option>
+                    <option type="radio" id="interlineadoF" value="2.5">2.5</option>
                 </select>
-            </div>    
+            </div>
         </aside>
-
+        <!-- ******************************* -->
 
         <!-----------CONTAINER: COLOR  ----------->
-
-        <div id="cont-paleta-color" class="close" >
+        <div id="cont-paleta-color" class="close">
             <div class="cont-sel-color ">
-                <h4>Seleccionar color</h4> 
-                <div class="color-elegido">            </div>
+                <h4>Seleccionar color</h4>
+                <div class="color-elegido"> </div>
             </div>
             <div id="paleta" class="paleta ">
                 <div class="red"></div>
@@ -280,15 +287,15 @@
                 <button class="cancelar">Cancelar</button>
                 <button class="establecer">Establecer</button>
             </div>
-    
+
         </div>
+        <!-- *************************** -->
 
         <!-- container color txt -->
-        
-        <div id="cont-paleta-color-txt" class="close" >
+        <div id="cont-paleta-color-txt" class="close">
             <div class="cont-sel-color-txt ">
-                <h4>Seleccionar color de texto</h4> 
-                <div class="color-elegido-txt">            </div>
+                <h4>Seleccionar color de texto</h4>
+                <div class="color-elegido-txt"> </div>
             </div>
             <div id="paleta-txt" class="paleta-txt">
                 <div class="red red-txt"></div>
@@ -305,15 +312,15 @@
                 <button class="cancelar-txt">Cancelar</button>
                 <button class="establecer-txt">Establecer</button>
             </div>
-    
+
         </div>
+        <!-- ****************************** -->
 
         <!-- container color background txt -->
-        
-        <div id="cont-paleta-color-txt-bg" class="close" >
+        <div id="cont-paleta-color-txt-bg" class="close">
             <div class="cont-sel-color-txt-bg">
-                <h4>Seleccionar color de fondo</h4> 
-                <div class="color-elegido-txt-bg">            </div>
+                <h4>Seleccionar color de fondo</h4>
+                <div class="color-elegido-txt-bg"> </div>
             </div>
             <div id="paleta-txt-bg" class="paleta-txt-bg">
                 <div class="red red-bg"></div>
@@ -330,12 +337,10 @@
                 <button class="cancelar-txt-bg">Cancelar</button>
                 <button class="establecer-txt-bg">Establecer</button>
             </div>
-    
         </div>
-
     </section>
-    <script src="./app.js"></script>   
+    <!-- ************************************ -->
+    <script src="./app.js"></script>
 </body>
+
 </html>
- 
- 
