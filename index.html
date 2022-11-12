@@ -84,7 +84,7 @@
         <main>
             <div class="meme">
                 <!-- CONTENEDOR MEME -->
-                <div class="container">
+                <div class="container" style="border:3px black">
                     <div class="top-text">
                         <h2 class="txt-top">TOP TEXT</h2>
                     </div>
@@ -116,6 +116,7 @@
                         <p class="sexag">#FFFFF</p>
                     </button>
                     <select type="radio" name="option-color" id="option-color">
+                        <option value="">Modo</option>
                         <option value="unset">Ninguno</option>
                         <option value="lighten">Aclarar</option>
                         <option value="darken">Oscurecer</option>
@@ -128,46 +129,55 @@
 
                 <div class="cont-range">
                     <label for="brillo">BRILLO</label>
+                    <br>
                     <input type="range" id="brillo" min="0" max="5" step="0.1" value="1">
                 </div>
 
                 <div class="cont-range">
                     <label for="opacidad">OPACIDAD</label>
+                    <br>
                     <input type="range" id="opacidad" min="0" max="5" step="0.1" value="1">
                 </div>
 
                 <div class="cont-range">
                     <label for="contraste">CONTRASTE</label>
+                    <br>
                     <input type="range" id="contraste" min="0" max="200" step="10" value="100">
                 </div>
 
                 <div class="cont-range">
                     <label for="desenfoque">DESENFOQUE</label>
+                    <br>
                     <input type="range" id="desenfoque" min="0" max="5" step="0.1" value="0">
                 </div>
 
                 <div class="cont-range">
                     <label for="grises">ESCALA DE GRISES</label>
+                    <br>
                     <input type="range" id="grises" min="0" max="100" step="10" value="0">
                 </div>
 
                 <div class="cont-range">
                     <label for="sepia">SEPIA</label>
+                    <br>
                     <input type="range" id="sepia" min="0" max="100" step="10" value="0">
                 </div>
 
                 <div class="cont-range">
                     <label for="hue">HUE</label>
+                    <br>
                     <input type="range" id="hue" min="0" max="359" step="1" value="0">
                 </div>
 
                 <div class="cont-range">
                     <label for="saturado">SATURADO</label>
+                    <br>
                     <input type="range" id="saturado" min="100" max="1000" step="10" value="100">
                 </div>
 
                 <div class="cont-range">
                     <label for="negativo">NEGATIVO</label>
+                    <br>
                     <input type="range" id="negativo" min="0" max="10" step="1" value="0">
                 </div>
                 <button type="button" class="reestablecer-f">Reestablecer filtros</button>
@@ -180,9 +190,7 @@
             <h2>TEXTO</h2>
             <div class="cont-txt-top">
                 <label for="top-text">SUPERIOR</label>
-                <br>
                 <input type="text" id="top-text" placeholder="TOP TEXT">
-                <br>
             </div>
             <div class="cont-check-txt">
                 <input type="checkbox" id="txt-none">
@@ -190,9 +198,7 @@
             </div>
             <div class="cont-txt-bottom">
                 <label for="bottom-text">INFERIOR</label>
-                <br>
                 <input type="text" id="bottom-text" placeholder="BOTTOM TEXT">
-                <br>
             </div>
             <div class="cont-check-txt">
                 <input type="checkbox" id="txt-bottom-none">
@@ -200,6 +206,7 @@
             </div>
             <div class="cont-fonts">
                 <label for="font">FUENTE</label>
+                <br>
                 <select type="radio" name="fuente" id="fuente">
                     <option value="Arial">Arial</option>
                     <option value="Arial Black">Arial Black</option>

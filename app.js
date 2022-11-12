@@ -33,7 +33,6 @@ const interlineadoC = $("#interlineadoC");
 const interlineadoD = $("#interlineadoD");
 const interlineadoE = $("#interlineadoE");
 const interlineadoF = $("#interlineadoF");
-// filtros
 const opcionesImg = $("#option-color");
 const brillo = $("#brillo");
 const opacidad = $("#opacidad");
@@ -66,7 +65,6 @@ const pink = $(".pink");
 const yellow = $(".yellow");
 const black = $(".black");
 const white = $(".white");
-/********* */
 const colorElegidoTxt = $(".color-elegido-txt");
 const circuloTxt = $(".circulo-txt");
 const elegidoInputColorTxt = $("#input-color-txt");
@@ -85,8 +83,7 @@ const pinkTxt = $(".pink-txt");
 const yellowTxt = $(".yellow-txt");
 const blackTxt = $(".black-txt");
 const whiteTxt = $(".white-txt");
-/****** */
-const colorElegidoTxtBg = $(".color-elegido-txt-bg")
+const colorElegidoTxtBg = $(".color-elegido-txt-bg");
 const circuloTxtBg = $(".circulo-txt-bg");
 const elegidoInputColorTxtBg = $("#input-color-txt-bg");
 const contPaletaBg = $("#cont-paleta-color-txt-bg");
@@ -103,10 +100,10 @@ const yellowBg = $(".yellow-bg");
 const blackBg = $(".black-bg");
 const whiteBg = $(".white-bg");
 const dowloand = $(".dowloand");
-const containerImg = $(".container-img")
-const btnTxt= $(".btn-txt")
-const modalTxt = $("#form-txt")
-const btnXtxt = $(".btn-x-txt")
+const containerImg = $(".container-img");
+const btnTxt= $(".btn-txt");
+const modalTxt = $("#form-txt");
+const btnXtxt = $(".btn-x-txt");
 
 /*---- --------FUNCIONES-------------*/
 
@@ -119,35 +116,33 @@ const modo = () => {
         btnClaro.innerText = "🌚 Modo oscuro";
     }
     else {
-        btnClaro.innerText = "😎 Modo claro"
+        btnClaro.innerText = "😎 Modo claro";
     }
 }
 
 /*-----modal configuracion img---------*/
 const cerrarModalImg = () => {
-    modalImg.classList.remove("close");
-    modalImg.classList.add("open");
+    modalImg.classList.toggle("close");
+    modalImg.classList.toggle("open");
 }
 
 const abrirModalImg = () => {
-    modalImg.classList.add("close");
-    modalImg.classList.remove("open");
+    modalImg.classList.toggle("close");
+    modalImg.classList.toggle("open");
 }
-
-
 
 //fuentes 
 const aplicarFuente = (e) =>{
     fuenteAplicada = e.target.value;
     topT.style.fontFamily = fuenteAplicada;
     botT.style.fontFamily = fuenteAplicada;
-    
 }
+    
 //tamaño fuente
 const aplicarTamaño = (e)=>{
     valorTamaño = size.value;
-    topT.style.fontSize = `${valorTamaño}px`
-    botT.style.fontSize = `${valorTamaño}px`
+    topT.style.fontSize = `${valorTamaño}px`;
+    botT.style.fontSize = `${valorTamaño}px`;
 }
 
 // color fondo img
@@ -158,20 +153,21 @@ const cambiarFondo = () => {
     circulo.style.backgroundColor = valorColorInput;
     contImg.style.backgroundColor = valorColorInput;
 }
+
 const cambiarFondoDiv = (color) => {
     colorP.innerText = color;
-    colorElegido.style.backgroundColor = color
-    circulo.style.backgroundColor = color
-    contImg.style.backgroundColor = color
+    colorElegido.style.backgroundColor = color;
+    circulo.style.backgroundColor = color;
+    contImg.style.backgroundColor = color;
 }
 
 // color texto div
 const cambiarColorTxt = (color) => {
     colorPtxt.innerText = color;
-    colorElegidoTxt.style.backgroundColor = color
-    circuloTxt.style.backgroundColor = color
-    contTxtTop.style.color = color
-    contTxtBottom.style.color = color
+    colorElegidoTxt.style.backgroundColor = color;
+    circuloTxt.style.backgroundColor = color;
+    contTxtTop.style.color = color;
+    contTxtBottom.style.color = color;
 }
 
 // color texto input
@@ -208,7 +204,32 @@ const actualizarImg = (e)=>{
     contImg.innerHTML=`
     <div class="style-img">
     <img class="style-img" id="imgFiltros" src="${e.target.value}" alt="">
-    </div>`
+    </div>`;
+}
+
+/*-----modal configuracion txt---------*/
+const abrirmodalTxt =() => {
+    modalTxt.classList.toggle("close");
+    modalTxt.classList.toggle("open");
+}
+const xTxt = () => {
+    modalTxt.classList.toggle("close");
+    modalTxt.classList.toggle("open");
+}
+const abrirTxt = () => {
+    contPaletaTxt.classList.toggle("close");
+    contPaletaTxt.classList.toggle("open");
+}
+
+const cancelarTxT =() => {
+    contPaletaTxt.classList.add("close");
+    contPaletaTxt.classList.remove("open");
+    cambiarColorTxt("black");
+}
+
+const establecerTXT =()=>{
+    contPaletaTxt.classList.add("close");
+    contPaletaTxt.classList.remove("open");
 }
 
 //contorno texto
@@ -216,7 +237,7 @@ const sinContorno = ()=>{
     topT.classList.remove("contClaro");
     topT.classList.remove("contOscuro");
     botT.classList.remove("contClaro");
-    botT.classList.remove("contOscuro")
+    botT.classList.remove("contOscuro");
 }
 
 const contornoClaro = () =>{
@@ -234,7 +255,6 @@ const contornoOscuro =  ()=>{
 }
 
 // fondo transparente
-
 const transpFondo = () =>{
     if(sinBg.checked == true){
         contTxtTop.style.background = "transparent";
@@ -258,7 +278,16 @@ const aplicarF = ( ) =>{
     let saturadoV = saturado.value;
     let negativoV = negativo.value;
     imgFiltros= $("#imgFiltros");
-    imgFiltros.style.filter = `brightness(${brilloV}) opacity(${opacidadV})  contrast(${contrasteV}%) blur(${desenfoqueV}px) grayscale(${grisesV}%) sepia(${sepiaV}%) hue-rotate(${hueV}deg) saturate(${saturadoV}%) invert(${negativoV})`;
+    imgFiltros.style.filter =
+        `brightness(${brilloV}) 
+        opacity(${opacidadV})  
+        contrast(${contrasteV}%) 
+        blur(${desenfoqueV}px) 
+        grayscale(${grisesV}%) 
+        sepia(${sepiaV}%) 
+        hue-rotate(${hueV}deg) 
+        saturate(${saturadoV}%) 
+        invert(${negativoV})`;
 }                 
 // menú opciones fondo
 const aplicarModos = (e) =>{
@@ -281,11 +310,62 @@ const restFiltros = ()=>{
     aplicarF(); 
 }
 
+// modal colores
+const abrirPaleta = () => {
+    contPaletaBg.classList.toggle("close");
+    contPaletaBg.classList.toggle("open");
+}
+
+const cancelarBG = () => {
+    contPaletaBg.classList.add("close");
+    contPaletaBg.classList.remove("open");
+    cambiarColorBgTxt("white");
+}
+
+const establecerBG = ()=>{
+    contPaletaBg.classList.add("close");
+    contPaletaBg.classList.remove("open");
+}
+
+//CONTAINER COLOR
+const abrirColor = () => {
+    contPaleta.classList.toggle("close");
+    contPaleta.classList.toggle("open");
+}
+
+const cancelarColor = () => {
+    contPaleta.classList.add("close");
+    contPaleta.classList.remove("open");
+    cambiarFondoDiv("black");
+}
+
+const estabColor = ()=>{
+    contPaleta.classList.add("close");
+    contPaleta.classList.remove("open");
+}
+
 //espaciado 
 const espaciar = () =>{
     let valorEspaciado = espaciadoI.value;
     topT.style.letterSpacing = `${valorEspaciado}px`;
     botT.style.letterSpacing = `${valorEspaciado}px`;
+}
+
+// textos meme
+const insertTxtT = (e) =>{
+    topT.innerText = e.target.value;
+}
+
+const inserttxtB = (e) =>{
+    botT.innerText = e.target.value;
+}
+// textos ocultos 
+const ocultarTxtT =()=>{
+    contTxtTop.classList.toggle("close");
+}
+
+const ocultarTxtB = ()=>{
+    contTxtBottom.classList.toggle("close");
 }
 
 //alineacion texto
@@ -315,38 +395,24 @@ const dowloandMeme =  () =>{
     domtoimage.toBlob($('.container')).then(function(blob){
         saveAs(blob,"mi-meme.png");
     });
-};
+}
 
 /****************Eventos************************/
 
 /*---- --------Modo claro/oscuro-------------*/
-btnClaro.addEventListener("click", modo)
-
+btnClaro.addEventListener("click", modo);
 
 /*-----modal configuracion img---------*/
 btnX.addEventListener("click", abrirModalImg);
 btnImg.addEventListener("click", cerrarModalImg);
 
 /*****url imagen****** */
-urlImg.addEventListener("input",actualizarImg)
+urlImg.addEventListener("input",actualizarImg);
 
 //CONTAINER COLOR
-btnAbrir.addEventListener("click", () => {
-    contPaleta.classList.toggle("close");
-    contPaleta.classList.toggle("open");
-})
-
-cancelar.addEventListener("click", () => {
-    contPaleta.classList.add("close");
-    contPaleta.classList.remove("open");
-    cambiarFondoDiv("black");
-
-})
-
-btnEstablecer.addEventListener("click",()=>{
-    contPaleta.classList.add("close");
-    contPaleta.classList.remove("open");
-})
+btnAbrir.addEventListener("click", abrirColor);
+cancelar.addEventListener("click", cancelarColor);
+btnEstablecer.addEventListener("click",estabColor);
 
 //restablecer filtros
 reestablecerF.addEventListener("click", restFiltros);
@@ -392,50 +458,18 @@ white.addEventListener("click", () => {
 dowloand.addEventListener("click",dowloandMeme);
 
 /*-----modal configuracion txt---------*/
-
-btnTxt.addEventListener("click", () => {
-    modalTxt.classList.remove("close");
-    modalTxt.classList.add("open");
-});
-
-btnXtxt.addEventListener("click", () => {
-    modalTxt.classList.add("close");
-    modalTxt.classList.remove("open");
-});
-
-btnAbrirTxt.addEventListener("click", () => {
-    contPaletaTxt.classList.toggle("close");
-    contPaletaTxt.classList.toggle("open");
-});
-
-cancelarTxt.addEventListener("click", () => {
-    contPaletaTxt.classList.add("close");
-    contPaletaTxt.classList.remove("open");
-    cambiarColorTxt("black");
-});
-
-btnEstablecerTxt.addEventListener("click",()=>{
-    contPaletaTxt.classList.add("close");
-    contPaletaTxt.classList.remove("open");
-});
+btnTxt.addEventListener("click", abrirmodalTxt);
+btnXtxt.addEventListener("click", xTxt);
+cancelarTxt.addEventListener("click", cancelarTxT);
+btnAbrirTxt.addEventListener("click", abrirTxt);
+btnEstablecerTxt.addEventListener("click",establecerTXT);
 
 /*******color text******** */
 
-btnAbrirBg.addEventListener("click", () => {
-    contPaletaBg.classList.toggle("close");
-    contPaletaBg.classList.toggle("open");
-});
 
-cancelarBg.addEventListener("click", () => {
-    contPaletaBg.classList.add("close");
-    contPaletaBg.classList.remove("open");
-    cambiarColorBgTxt("white");
-});
-
-btnEstablecerBg.addEventListener("click",()=>{
-    contPaletaBg.classList.add("close");
-    contPaletaBg.classList.remove("open");
-});
+btnAbrirBg.addEventListener("click", abrirPaleta);
+cancelarBg.addEventListener("click", cancelarBG);
+btnEstablecerBg.addEventListener("click",establecerBG);
 
 /*colores txt*/
 
@@ -510,22 +544,12 @@ whiteBg.addEventListener("click", () => {
 });
 
 // textos meme
-txtTopI.addEventListener("input", (e) =>{
-    topT.innerText = e.target.value;
-});
-
-txtBottomI.addEventListener("input", (e) =>{
-    botT.innerText = e.target.value;
-});
+txtTopI.addEventListener("input", insertTxtT);
+txtBottomI.addEventListener("input", inserttxtB);
 
 // textos ocultos 
-txtTopNone.addEventListener("click", ()=>{
-    contTxtTop.classList.toggle("close");
-});
-
-txtBottomNone.addEventListener("click", ()=>{
-    contTxtBottom.classList.toggle("close")
-});
+txtTopNone.addEventListener("click", ocultarTxtT);
+txtBottomNone.addEventListener("click", ocultarTxtB);
 
 //fondo transparente
 sinBg.addEventListener("click",transpFondo);
@@ -567,4 +591,4 @@ saturado.addEventListener("change", aplicarF);
 negativo.addEventListener("change", aplicarF);
 
 // menú opciones fondo
-opcionesImg.addEventListener("click",aplicarModos);
+opcionesImg.addEventListener("change", aplicarModos);
