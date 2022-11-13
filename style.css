@@ -30,7 +30,7 @@ section#first{
 }
 
 header{
-    height: 20vh;
+    min-height: 20vh;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -50,7 +50,6 @@ header nav ul{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 header nav ul li{
@@ -70,18 +69,18 @@ header nav ul li button:hover{
     color:var(--hoverLiModoOscuro);
     outline: 2px double var(--bottomBorderHover);
 }
+
 main{
     min-width: 100vw;
     display: flex;
     justify-content: center;
     transition: background 0.5s linear;
-
 }
+
 .meme{
     display: flex;
     align-items: center;
     flex-direction: column;
-
 }
 
 div.container{
@@ -117,7 +116,7 @@ div.container div.top-text, div.bottom-text{
 
 div.container div.top-text h2, div.bottom-text h2{
     padding: 5px;
-    margin-top:5px
+    margin-top:5px;
 }
 
 .meme button.dowloand{
@@ -139,7 +138,7 @@ aside#form-img{
 aside#form-img, 
 aside#form-txt,
 aside#form-txt-bg{
-    width: 25%;
+    min-width: 25%;
     flex-direction: column;
     justify-content: center;
     padding: 10px;
@@ -244,6 +243,7 @@ aside#form-txt label, div, button{
 aside#form-txt button{
    margin: 2px;
 }
+
 aside#form-txt .cont-contorno .cont-btn-contorno{
     display: flex;
     justify-content: center;
@@ -254,7 +254,6 @@ aside#form-txt .cont-contorno .cont-btn-contorno button{
     width: fit-content;
     background-color: #708499;
     border: none;
-    
 }
 
 button:hover{
@@ -267,7 +266,6 @@ select:hover{
 
 aside#form-txt input:hover{
     outline: 2px double blueviolet;
-
 }
 
 /*****paleta de colores***/
@@ -295,7 +293,6 @@ div#cont-paleta-color-txt-bg{
     justify-content: space-around;
     align-items: center;
     color: #1b5fa8;
-
 }
 
 #cont-paleta-color .cont-sel-color .color-elegido,
@@ -313,7 +310,6 @@ div#cont-paleta-color-txt-bg{
     flex-wrap: wrap ;
     justify-content: center;
     align-items: center;
-
 }
 
 #cont-paleta-color .paleta div,
@@ -359,7 +355,6 @@ div#cont-paleta-color-txt-bg{
 #cont-paleta-color-txt .paleta-txt div.yellow-txt,
 #cont-paleta-color-txt-bg .paleta-txt-bg div.yellow-bg{
     background-color: #ffff00;
-    
 }
 
 .black,
@@ -402,7 +397,6 @@ div#cont-paleta-color-txt-bg{
 .form-img h4{
     padding: 10PX;
     margin: 5pX;
-
 }
 .cont-range, select, input{
     margin:3px ;
@@ -412,14 +406,12 @@ div#cont-paleta-color-txt-bg{
 .modoClaro{
     background-color: var(--modoClaroSection);
     transition: background 0.5s linear ;
-    
 }
 
 .modoClaroHeader{
     color: var(--textoModoClaro);
     transition: background 0.5s linear ;
     background-color: var(--modoClaroHeader  ); 
-
 }
 
 .open{
@@ -458,7 +450,9 @@ div#cont-paleta-color-txt-bg{
         height: 350px;
         font-size: 15px;
     }
-
+    aside{
+        width:fit-content;
+    }
 
 }
 
@@ -468,5 +462,8 @@ div#cont-paleta-color-txt-bg{
         width: 300px;
         height: 450px;
         font-size: 20px;
+    }
+    aside{
+        width:fit-content;
     }
  }
