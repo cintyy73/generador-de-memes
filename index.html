@@ -47,7 +47,7 @@
     <meta property="og:url" content="https://cintyy73.github.io/generador-de-memes/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Generador de memes" />
-    <meta property="og:image" content="./assets/mi-generador-de-memes.png" />
+    <meta property="og:image" content="./assets/mi-generador-de-memes" />
     <meta property="og:image" name="twitter:image" content="./assets/mi-generador-de-memes.png" />
     <link rel="apple-touch-icon" href="./assets/mi-generador-de-memes.png" />
     <meta property="og:description" name="twitter:description" content="App para que puedas crear tu propio meme." />
@@ -100,7 +100,7 @@
         <!-- **************************** -->
 
         <!-- ASIDE PARA CONFIGURAR IMAGEN -->
-        <aside z-index="100" id="form-img" class="close">
+        <aside  id="form-img" class="close">
             <button class="btn-x">&times</button>
             <form action="">
                 <h2>IMAGEN</h2>
@@ -185,11 +185,12 @@
         </aside>
         <!-- ************************** -->
         <!-- ASIDE PARA CONFIGURAR TEXTO -->
-        <aside z-index="100" id="form-txt" class="close">
+        <aside id="form-txt" class="close">
             <button class="btn-x-txt">&times</button>
             <h2>TEXTO</h2>
             <div class="cont-txt-top">
                 <label for="top-text">SUPERIOR</label>
+                <br>
                 <input type="text" id="top-text" placeholder="TOP TEXT">
             </div>
             <div class="cont-check-txt">
@@ -198,6 +199,7 @@
             </div>
             <div class="cont-txt-bottom">
                 <label for="bottom-text">INFERIOR</label>
+                <br>
                 <input type="text" id="bottom-text" placeholder="BOTTOM TEXT">
             </div>
             <div class="cont-check-txt">

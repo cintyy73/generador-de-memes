@@ -72,6 +72,7 @@ header nav ul li button:hover{
 
 main{
     min-width: 100vw;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     transition: background 0.5s linear;
@@ -246,8 +247,6 @@ aside#form-txt button{
 
 aside#form-txt .cont-contorno .cont-btn-contorno{
     display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
 aside#form-txt .cont-contorno .cont-btn-contorno button{
@@ -422,6 +421,9 @@ div#cont-paleta-color-txt-bg{
     display: none;
 }
 
+.zIndex{
+    z-index: 100;
+}
 .contClaro {
     -webkit-text-stroke-color:  #b7dde8;
     -webkit-text-stroke-width: 2px;

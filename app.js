@@ -129,6 +129,7 @@ const cerrarModalImg = () => {
 const abrirModalImg = () => {
     modalImg.classList.toggle("close");
     modalImg.classList.toggle("open");
+    modalImg.classList.toggle("zIndex");
 }
 
 //fuentes 
